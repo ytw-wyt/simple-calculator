@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Calculator.css"; // Optional for styling
+import "./Calculator.css";
 
 const Calculator = () => {
   const [expression, setExpression] = useState("");
 
   const handleButtonClick = (value) => {
     if (value === "=") {
-      // Send expression to backend
       setExpression("");
       axios
         .post("http://localhost:5001/calculate", { expression })
@@ -15,8 +14,8 @@ const Calculator = () => {
           setExpression(response.data.result);
         })
         .catch((error) => {
-            console.log(error);
-            alert("Error calculating expression");
+          console.log(error);
+          alert("Error calculating expression");
         });
     } else if (value === "C") {
       setExpression("");
@@ -28,7 +27,7 @@ const Calculator = () => {
   return (
     <div className="calculator">
       <div className="display">
-        <div className="expression">{expression}</div>
+        <div className="expression">{expression || "0"}</div>
       </div>
       <div className="buttons">
         {["7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", ".", "C", "+", "="].map((button) => (
