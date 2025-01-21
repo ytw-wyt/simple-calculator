@@ -26,7 +26,11 @@ app.post("/calculate", (req, res) => {
   }
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// If the file is executed directly, run the server. Otherwise, export app for testing.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+} else {
+  module.exports = app;
+}
