@@ -13,8 +13,6 @@ The Calculator App is a simple, full-stack application designed for educational 
 - **Containerization with Docker:**  
   Using Docker and Docker Compose to package, deploy, and run the application consistently across various environments.
 
-In this assignment, you would understand and implement the fundamentals of modern web application development and deployment. Whether you're learning about building RESTful APIs, managing state in a client-side application, or containerizing apps for easier deployment, this calculator project offers a practical, straightforward example to get started.
-
 ## Setting Up the Application Using Docker
 
 Follow these steps to clone and set up the repository:
