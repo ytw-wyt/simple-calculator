@@ -37,7 +37,7 @@ docker-compose up --build
 ```
 
 ### 4. View the Calculator
-Open your browser and go to http://localhost:80
+Open your browser and go to http://localhost:3000
 
 
 ## Setting Up the Application Using Node.js Locally
