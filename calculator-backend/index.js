@@ -19,6 +19,7 @@ app.post("/calculate", (req, res) => {
   console.log('Received expression:', expression);
   try {
     // Evaluate the expression
+    //added console output
     const result = eval(expression); // Use eval carefully; validate input in production
     console.log(`[INFO] Calculation result: ${result}`); // Log result
     res.json({ result });
