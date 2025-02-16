@@ -27,7 +27,7 @@ const Calculator = () => {
   return (
     <div className="calculator">
       <div className="display">
-        <div className="expression">{expression || "0"}</div>
+      <div className="expression" data-testid ="total">{expression || "0"}</div>
       </div>
       <div className="buttons">
         {["7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "0", ".", "C", "+", "="].map((button) => (
